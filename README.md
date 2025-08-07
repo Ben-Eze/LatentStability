@@ -8,11 +8,38 @@ In the latent space, we perform latent stability analysis using Lyapunov exponen
 <img src="images/illustration.png"/>
 </p>
 
+If you use this repository, please cite the following works:
+> Elise Özalp and Luca Magri.  
+> *Stability analysis of chaotic systems in latent spaces.*  
+> Nonlinear Dynamics, 113(11):13791–13806, 2025.  
+>
+> Elise Özalp and Luca Magri.  
+> *Inferring stability properties of chaotic systems on autoencoders' latent spaces.*  
+> In: [*NeurIPS Workshop on Machine Learning and the Physical Sciences*](https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_84.pdf)), 2024.  
+**BibTeX:**
+```bibtex
+@article{ozalp2025stability,
+  title={Stability analysis of chaotic systems in latent spaces},
+  author={{\"O}zalp, Elise and Magri, Luca},
+  journal={Nonlinear Dynamics},
+  volume={113},
+  number={11},
+  pages={13791--13806},
+  year={2025},
+  publisher={Springer}
+}
 
+@article{ozalp2024inferring,
+  title={Inferring stability properties of chaotic systems on autoencoders' latent spaces},
+  author={{\"O}zalp, Elise and Magri, Luca},
+  year={2024},
+  note={In: \textit{NeurIPS Workshop on Machine Learning and the Physical Sciences}},
+  howpublished={\url{https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_84.pdf}}
+}
+```
 ## Kuramoto-Sivashinsky (KS) Equation
-The Kuramoto–Sivashinsky (KS) equation is a fourth-order partial differential equation that models instabilities of flame fronts and represents a fundamental model in the study of spatiotemporally chaotic behaviour. Writing u = u(t,x), the equation is given by
-$$ u_t+ u_{xx}+ u_{xxxx}+ uu_{x}  = 0$$
-with periodic boundary conditions, $u (t, 0) = u (t, L)$ on the spatial domain $[0, L]$.  For L=22, the system is chaotic and the manifold's dimension $d_{M}$ is estimated to be of $d_{M}=8$ whilst the attractor's dimension is estimated at $d_{KY}=6.001$. 
+The Kuramoto–Sivashinsky (KS) equation is a fourth-order partial differential equation that models instabilities of flame fronts and represents a fundamental model in the study of spatiotemporally chaotic behaviour. Writing $u = u(t,x)$, the equation is given by
+$u_t + u_{xx} + u_{xxxx} + u u_x = 0 $ with periodic boundary conditions, $u (t, 0) = u (t, L)$ on the spatial domain $[0, L]$.  For L=22, the system is chaotic and the manifold's dimension $d_{M}$ is estimated to be of $d_{M}=8$ whilst the attractor's dimension is estimated at $d_{KY}=6.001$. 
 
 ## Convolutional Autoencoder (CAE)
 The CAE is used to reduce the high-dimensional spatial states of the system to a lower-dimensional latent space. The architecture consists of:

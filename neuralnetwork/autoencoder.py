@@ -86,8 +86,8 @@ class CAE(nn.Module):
         for name, module in self.encoder.named_modules():
             if isinstance(module, nn.Conv1d) or isinstance(module, nn.Linear):
                 weight_init_dict[weight_init_name](module.weight)
-        for name, module in self.decoder.named_modules() or isinstance(module, nn.Linear):
-            if isinstance(module, nn.Conv1d):
+        for name, module in self.decoder.named_modules():
+            if isinstance(module, nn.Conv1d) or isinstance(module, nn.Linear):
                 weight_init_dict[weight_init_name](module.weight)
 
     def forward(self, input):
